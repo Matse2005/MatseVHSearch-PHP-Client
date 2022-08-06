@@ -13,7 +13,7 @@
 ## ✨ Features
 
 - Thin & minimal low-level HTTP client to interact with MatseVHSearch's API
-- Supports php `^7.4`.
+- Supports php `>=7.4`.
 
 ## 💡 Getting Started
 
