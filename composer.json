@@ -1,0 +1,23 @@
+{
+    "name": "matsevh/matsevhsearch",
+    "description": "A simple custom build Algolio alternative",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MatseVH",
+            "email": "matse@vanhorebeek.be"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MatseVH\\MatseVHSearch\\": "src"
+        },
+        "files": [
+            "src/SearchClient.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}
