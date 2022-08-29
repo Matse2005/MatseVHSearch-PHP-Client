@@ -30,6 +30,40 @@ class SearchClient
     return json_decode($result, true);
   }
 
+  public function reverse($index)
+  {
+    // Perform a POST request to the API
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://search.m-vh.eu/api/v1/reverse");
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, array(
+      "index" => $index,
+      "app_id" => $this->appId,
+      "key" => $this->apiKey
+    ));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return json_decode($result, true);
+  }
+
+  public function random($index)
+  {
+    // Perform a POST request to the API
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://search.m-vh.eu/api/v1/random");
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, array(
+      "index" => $index,
+      "app_id" => $this->appId,
+      "key" => $this->apiKey
+    ));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return json_decode($result, true);
+  }
+
   public function push($index, $objects)
   {
     // If objects are json, decode them

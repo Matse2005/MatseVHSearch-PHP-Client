@@ -137,6 +137,20 @@ Get:
 $results = $client->get('products');
 ```
 
+Reverse:
+
+```php
+// Get all the pushed data reversed from the index -> products
+$results = $client->reverse('products');
+```
+
+Random:
+
+```php
+// Get all the pushed data in random order from the index -> products
+$results = $client->random('products');
+```
+
 Need help? Contact me by email: [matse@vanhorebeek.be](mailto:matse@vanhorebeek.be)
 
 ## 📄 License
